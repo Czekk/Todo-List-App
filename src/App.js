@@ -13,11 +13,12 @@ class App extends Component {
     showTaskForm: false
   }
 
-  let NewTask = {
+  NewTask = {
     title: null,
     description: null,
     date: null,
-    time: null
+    time: null,
+    priority: null
   }
 
   showTaskFormHandler = (event)=>{
@@ -25,7 +26,19 @@ class App extends Component {
       {showTaskForm: true}
     )
   }
-
+//methods for TaskForm
+  titileChangeHandler=(event)=>{
+    this.NewTask.title= event.target.value;
+  }
+  descChangeHandler=(event)=>{
+    this.NewTask.description= event.target.value;
+  }
+  dateChangeHandler=(event)=>{
+    this.NewTask.date= event.target.value;
+  }
+  timeChangeHandler=(event)=>{
+    this.NewTask.time= event.target.value;
+  }
   cancelHandler = () =>{
     this.setState(
       {showTaskForm: false}
@@ -33,13 +46,29 @@ class App extends Component {
   }
 
   addNewTaskHandler =() =>{
-
+    const tasks = this.state.tasks;
+    tasks.push(this.NewTask);
+    this.setState({Tasks: tasks});
+    this.NewTask= {
+      title: null,
+      description: null,
+      date: null,
+      time: null,
+      priority: null
+    };
+    this.setState(
+      {showTaskForm: false}
+    );
   }
   render() {
     let tasks = null;
     let taskForm = null;
     if(this.state.showTaskForm){
-        taskForm= (<TaskForm 
+        taskForm= (<TaskForm
+                  titleChange={(event)=>this.titileChangeHandler(event)}
+                  descChange={(event)=>this.descChangeHandler(event)}
+                  dateChange={(event)=>this.dateChangeHandler(event)}
+                  timeChange={(event)=> this.timeChangeHandler(event)}
                   cancel= {this.cancelHandler}
                   done= {this.addNewTaskHandler}
                   />
