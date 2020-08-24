@@ -11,6 +11,7 @@ return (
         value={probs.desc}/>
         <p>{probs.date}</p>
         <p>{probs.time}</p>
+        <p>{probs.id}</p>
 
         <button onClick = {probs.delete}>delete</button>
         <input type = "checkBox" title="mark as completed"></input>

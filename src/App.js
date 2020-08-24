@@ -1,15 +1,10 @@
 import React, {Component} from 'react';
-import Task from './Task/Task';
-import TaskForm from './TaskForm/TaskForm';
-import logo from './logo.svg';
-import './App.css';
-import task from './Task/Task';
+import Task from './Components/Task/Task';
+import TaskForm from './Components/TaskForm/TaskForm';
 
 class App extends Component {
   state= {
     tasks: [
-      {title: 'Finish this app', description: 'this need work done'},
-      {title: 'Shopping', description: 'Grocery, and clothes'}
     ],
     showTaskForm: false
   }
@@ -50,7 +45,8 @@ class App extends Component {
   addNewTaskHandler =() =>{
     const tasks = this.state.tasks;
     tasks.push(this.NewTask);
-    const taskIndex = tasks.findIndex(this.NewTask);
+    const taskIndex = tasks.findIndex(task => {
+      return task.title === this.NewTask.title});
     tasks[taskIndex].id= taskIndex;
     this.setState({Tasks: tasks});
     this.NewTask= {
@@ -84,7 +80,12 @@ class App extends Component {
       <div>
         {this.state.tasks.map(task => {
           return (
-            <Task title= {task.title} desc= {task.description} delete= {this.deleteTaskHandler} />
+            <Task title= {task.title} 
+            desc= {task.description} 
+            delete= {this.deleteTaskHandler}
+            date= {task.date}
+            time= {task.time}
+            id = {task.id} />
           ) 
           })
         }
