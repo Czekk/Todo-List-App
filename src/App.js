@@ -3,6 +3,7 @@ import Task from './Task/Task';
 import TaskForm from './TaskForm/TaskForm';
 import logo from './logo.svg';
 import './App.css';
+import task from './Task/Task';
 
 class App extends Component {
   state= {
@@ -18,7 +19,8 @@ class App extends Component {
     description: null,
     date: null,
     time: null,
-    priority: null
+    priority: null,
+    id: null
   }
 
   showTaskFormHandler = (event)=>{
@@ -48,13 +50,16 @@ class App extends Component {
   addNewTaskHandler =() =>{
     const tasks = this.state.tasks;
     tasks.push(this.NewTask);
+    const taskIndex = tasks.findIndex(this.NewTask);
+    tasks[taskIndex].id= taskIndex;
     this.setState({Tasks: tasks});
     this.NewTask= {
       title: null,
       description: null,
       date: null,
       time: null,
-      priority: null
+      priority: null,
+      id: null
     };
     this.setState(
       {showTaskForm: false}
@@ -79,7 +84,7 @@ class App extends Component {
       <div>
         {this.state.tasks.map(task => {
           return (
-            <Task title= {task.title} desc= {task.description} />
+            <Task title= {task.title} desc= {task.description} delete= {this.deleteTaskHandler} />
           ) 
           })
         }

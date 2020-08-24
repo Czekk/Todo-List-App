@@ -9,7 +9,9 @@ return (
         <input type= 'text'
         onClick= {probs.editDesc} 
         value={probs.desc}/>
-        
+        <p>{probs.date}</p>
+        <p>{probs.time}</p>
+
         <button onClick = {probs.delete}>delete</button>
         <input type = "checkBox" title="mark as completed"></input>
     </div>
