@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
-import Task from './Components/Task/Task';
+import Task from './Components/Tasks/Task/Task';
+import Tasks from './Components/Tasks/Tasks';
 import TaskForm from './Components/TaskForm/TaskForm';
+import Header from './Components/Header/Header';
 
 class App extends Component {
   state= {
@@ -80,7 +82,7 @@ class App extends Component {
       <div>
         {this.state.tasks.map(task => {
           return (
-            <Task title= {task.title} 
+            <Tasks title= {task.title} 
             desc= {task.description} 
             delete= {this.deleteTaskHandler}
             date= {task.date}
@@ -98,11 +100,7 @@ class App extends Component {
 
     return (
       <div className="App">
-        <header>
-          <h1>Todo List</h1>
-          <h4>'Plan Ahead!'</h4>
-        </header>
-
+        <Header/>
         <body>
            {tasks}
            {taskForm}

@@ -1,7 +1,7 @@
 .formContainer {
-    background-color: linen;
-    border-radius: 10px;
-    margin: 10px;
+    background-color: #9DC8E4;
+    border-radius: 0 0 10px 10px;
+    margin: 0 10px 10px 10px;
     padding-bottom: 50px;
     float:center;
     width: 90%;
