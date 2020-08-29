@@ -80,18 +80,12 @@ class App extends Component {
     else {
       tasks = (
       <div>
-        {this.state.tasks.map(task => {
-          return (
-            <Tasks title= {task.title} 
-            desc= {task.description} 
-            delete= {this.deleteTaskHandler}
-            date= {task.date}
-            time= {task.time}
-            id = {task.id} />
-          ) 
-          })
-        }
-        <button onClick= {this.showTaskFormHandler}> Add new task </button>
+          <Tasks
+             tasks= {this.state.tasks}
+             delete= {this.deleteTaskHandler}
+             onClick= {this.showTaskFormHandler}
+             />
+
       </div>
       );
     }
