@@ -66,7 +66,7 @@ class App extends Component {
   render() {
     let tasks = null;
     let taskForm = null;
-    if(this.state.showTaskForm){
+    if(this.state.showTaskForm) {
         taskForm= (<TaskForm
                   titleChange={(event)=>this.titileChangeHandler(event)}
                   descChange={(event)=>this.descChangeHandler(event)}
@@ -90,16 +90,11 @@ class App extends Component {
       );
     }
     
-    
-
     return (
       <div className="App">
         <Header/>
-        <body>
            {tasks}
            {taskForm}
-           
-        </body>
       </div>
     );
   }
