@@ -1,0 +1,62 @@
+.grid-container {
+    background-color: #99B2BF;
+    box-shadow: 3px 0px;
+    width: 90%;
+    margin: 10px;
+    display: grid;
+    grid-template-columns: 60% 20% 20%;
+    border-radius: 0px 10px 10px 0px;
+    border-left: 6px solid black;
+    box-sizing: border-box;
+}
+
+.side {
+    margin:auto;
+    width:95%;
+}
+
+.util {
+    margin: auto;
+    width: 95%;
+}
+
+#delButton {
+    padding:10px;
+    background-color: red;
+    color: white;
+    font-weight: bolder;
+    border-radius: 8px;
+    border:1px thin white;
+    float: right;
+}
+
+.checker {
+    color: green;
+    float: right;
+}
+
+input[type=text] {    
+    border: transparent;
+    font-family: cursive;
+    background-color: #E5F6FE;
+    font-weight: bold;
+    margin-bottom: 1px;
+    height: 5px;
+}
+textarea {    
+    border: transparent;
+    font-family: cursive;
+    background-color: #E5F6FE;
+    margin-top: 1px;
+    height: 10px;
+}
+input[type=date] {
+    border: transparent;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #E5F6FE;
+}
+input[type=time] {
+    border: transparent;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color:#E5F6FE;
+}
