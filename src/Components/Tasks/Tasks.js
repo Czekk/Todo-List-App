@@ -1,9 +1,11 @@
 import React from 'react';
 import Task from './Task/Task';
+import './Tasks.css';
 
 const tasks = (probs) => {
     return (
         <div>
+          <div clasName='tasksCont' >
         {probs.tasks.map(task => {
           return (
             <Task title= {task.title} 
@@ -15,7 +17,8 @@ const tasks = (probs) => {
           ) 
           })
         }
-        <button onClick= {probs.onClick}> Add new task </button>
+        </div>
+        <button id='addTaskButton' onClick= {probs.onClick}>+</button>
       </div>
     );
     
