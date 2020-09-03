@@ -4,8 +4,8 @@ import './Tasks.css';
 
 const tasks = (probs) => {
     return (
-        <div>
-          <div clasName='tasksCont' >
+        <div clasName='tasksCont'>
+          <div>
         {probs.tasks.map(task => {
           return (
             <Task title= {task.title} 

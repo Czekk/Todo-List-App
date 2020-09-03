@@ -27,12 +27,15 @@
     font-weight: bolder;
     border-radius: 8px;
     border:1px thin white;
+    position: static;
     float: right;
+    bottom: 0px;
+    left: 40px;
 }
 
 .checker {
     color: green;
-    float: right;
+    float: left;
 }
 
 input[type=text] {    
@@ -48,15 +51,17 @@ textarea {
     font-family: cursive;
     background-color: #E5F6FE;
     margin-top: 1px;
-    height: 10px;
+    height: 30px;
 }
 input[type=date] {
     border: transparent;
     font-family: Arial, Helvetica, sans-serif;
     background-color: #E5F6FE;
+    height: 5px;
 }
 input[type=time] {
     border: transparent;
     font-family: Arial, Helvetica, sans-serif;
     background-color:#E5F6FE;
+    height: 5px;
 }

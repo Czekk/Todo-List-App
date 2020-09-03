@@ -15,7 +15,7 @@ return (
         <div className='util'>
             <label className='checker'>complete</label>
             <input className='checker' type = "checkBox" title="mark as completed"/><br/>
-            <button id='delButton' onClick = {probs.delete}>X</button> 
+            <button id='delButton' onClick = {probs.delete} title= 'Delete task'>X</button> 
         </div> 
     </div>
 );

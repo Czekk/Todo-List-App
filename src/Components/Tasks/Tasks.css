@@ -1,5 +1,5 @@
 #addTaskButton {
-    position: fixed;
+    position: absolute;
     top: 110px;
     right: 140px;
     background-color: rgb(0,195,0);opacity:0.9;
@@ -15,6 +15,12 @@
     border: 1px solid silver;
 }
 
+#addTaskButton:hover {
+    height: 45px;
+    width: 45px;
+}
+
 .tasksCont {
-    
+    overflow: scroll;
+    height:600px;
 }
