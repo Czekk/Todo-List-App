@@ -4,21 +4,19 @@ import './Tasks.css';
 
 const tasks = (probs) => {
     return (
-        <div clasName='tasksCont'>
-          <div>
-        {probs.tasks.map(task => {
+        <div clasName='tasksCont'>          
+        {probs.tasks.map((task, index) => {
           return (
-            <Task title= {task.title} 
+            <Task title= {task.title}
+        //    editTitle={probs.changeTitle(index)}
             desc= {task.description} 
-            delete= {probs.delete}
+            delete= {probs.delete(index)}
             date= {task.date}
             time= {task.time}
             id = {task.id} />
           ) 
           })
-        }
-        </div>
-        <button id='addTaskButton' onClick= {probs.onClick}>+</button>
+        }               
       </div>
     );
     

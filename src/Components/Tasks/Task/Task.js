@@ -5,12 +5,14 @@ const task = (probs) => {
 return (
     <div className = 'grid-container'>
         <div className='main'> 
-            <input type='text' onClick= {probs.editTitle} value= {probs.title}/>
-            <textarea type='text' onClick= {probs.editDesc} value= {probs.desc}/> 
+            <input type='text' onChange= {probs.editTitle} value= {probs.title} placeholder='Title'/> <br/>
+            <textarea type='text' onChange= {probs.editDesc} value= {probs.desc} placeholder='Description'/> 
         </div>
         <div className= 'side'>
-            <input type='date'value= {probs.date} />
-            <input type='time' value= {probs.time}/>
+            <label>Date: </label>
+            <input type='date' onChange={probs.editDate} value= {probs.date}/><br/>
+            <label>Time: </label>
+            <input type='time' onChange= {probs.editTime} value= {probs.time}/>
         </div>
         <div className='util'>
             <label className='checker'>complete</label>

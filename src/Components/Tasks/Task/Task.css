@@ -39,29 +39,31 @@
 }
 
 input[type=text] {    
-    border: transparent;
+    border: 1px thin gray;
     font-family: cursive;
     background-color: #E5F6FE;
     font-weight: bold;
-    margin-bottom: 1px;
-    height: 5px;
+    margin: 5px;
+    height: 20px;
+    width: 80%;
 }
 textarea {    
-    border: transparent;
+    border: 1px thin gray;
     font-family: cursive;
     background-color: #E5F6FE;
-    margin-top: 1px;
-    height: 30px;
+    margin: 5px;
+    height: 40px;
+    width: 80%;
 }
 input[type=date] {
-    border: transparent;
+    border: 1px thin gray;
     font-family: Arial, Helvetica, sans-serif;
     background-color: #E5F6FE;
-    height: 5px;
+    height: 20px;
 }
 input[type=time] {
-    border: transparent;
+    border: 1px thin gray;
     font-family: Arial, Helvetica, sans-serif;
     background-color:#E5F6FE;
-    height: 5px;
+    height: 20px;
 }
