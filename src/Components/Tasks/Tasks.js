@@ -8,9 +8,9 @@ const tasks = (probs) => {
         {probs.tasks.map((task, index) => {
           return (
             <Task title= {task.title}
-        //    editTitle={probs.changeTitle(index)}
+            editTitle={()=>probs.changeTitle(index)}
             desc= {task.description} 
-            delete= {probs.delete(index)}
+            delete= {() => probs.delete(index)}
             date= {task.date}
             time= {task.time}
             id = {task.id} />

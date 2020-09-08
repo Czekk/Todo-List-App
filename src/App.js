@@ -23,8 +23,8 @@ class App extends Component {
     this.setState({tasks: tasks});
   }
   deleteTaskHandler =(taskIndex) =>{
-    const tasks =this.state.tasks;
-    tasks.splice(tasks[taskIndex],1);
+    let tasks =[...this.state.tasks];
+    tasks.splice( taskIndex, 1 );
     this.setState({tasks: tasks});
   }
   render() {
