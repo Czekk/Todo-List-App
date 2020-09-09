@@ -1,18 +1,18 @@
-import React, {Component} from 'react';
+import React from 'react';
 import './Task.css';
 
 const task = (probs) => {
 return (
     <div className = 'grid-container'>
         <div className='main'> 
-            <input type='text' onChange= {probs.editTitle} value= {probs.title} placeholder='Title'/> <br/>
-            <textarea type='text' onChange= {probs.editDesc} value= {probs.desc} placeholder='Description'/> 
+            <input type='text' onChange= {probs.edit} value= {probs.title} placeholder='Title' name='title'/> <br/>
+            <textarea type='text' onChange= {probs.edit} value= {probs.desc} placeholder='Description' name='desc'/> 
         </div>
         <div className= 'side'>
             <label>Date: </label>
-            <input type='date' onChange={probs.editDate} value= {probs.date}/><br/>
+            <input type='date' onChange={probs.edit} value= {probs.date} name='date'/><br/>
             <label>Time: </label>
-            <input type='time' onChange= {probs.editTime} value= {probs.time}/>
+            <input type='time' onChange= {probs.edit} value= {probs.time} name='time'/>
         </div>
         <div className='util'>
             <label className='checker'>complete</label>

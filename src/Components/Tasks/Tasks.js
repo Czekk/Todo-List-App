@@ -2,25 +2,16 @@ import React from 'react';
 import Task from './Task/Task';
 import './Tasks.css';
 
-const tasks = (probs) => {
-    return (
-        <div clasName='tasksCont'>          
-        {probs.tasks.map((task, index) => {
+const tasks = (probs) => probs.tasks.map((task, index) => {
           return (
             <Task title= {task.title}
-            editTitle={()=>probs.changeTitle(index)}
-            desc= {task.description} 
-            delete= {() => probs.delete(index)}
-            date= {task.date}
-            time= {task.time}
-            id = {task.id} />
+            edit={(event)=>probs.change(event, index)}
+            desc= {task.description}                     
+            date= {task.date}            
+            time= {task.time}            
+            key = {task.id}
+            delete= {() => probs.delete(index)} />
           ) 
-          })
-        }               
-      </div>
-    );
-    
-
-}
+          });
 
 export default tasks;
