@@ -6,7 +6,7 @@ const tasks = (probs) => probs.tasks.map((task, index) => {
           return (
             <Task title= {task.title}
             edit={(event)=>probs.change(event, index)}
-            desc= {task.description}                     
+            desc= {task.desc}                     
             date= {task.date}            
             time= {task.time}            
             key = {task.id}
