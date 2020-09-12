@@ -1,6 +1,5 @@
 import React from 'react';
 import Task from './Task/Task';
-import './Tasks.css';
 
 const tasks = (probs) => probs.tasks.map((task, index) => {
           return (
@@ -10,8 +9,13 @@ const tasks = (probs) => probs.tasks.map((task, index) => {
             date= {task.date}            
             time= {task.time}            
             key = {task.id}
-            delete= {() => probs.delete(index)} />
+            delete= {() => probs.delete(index)}
+            completeTaskHandler={completeTaskHandler} />
           ) 
           });
-
+       
+          const completeTaskHandler=() => {
+            document.getElementById("toStrike").style.textDecoration= "line-through";
+        }
+        
 export default tasks;

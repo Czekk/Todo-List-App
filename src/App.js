@@ -68,7 +68,7 @@ class App extends Component {
   render() {
     let tasks = null;
       tasks = (
-      <div>
+      <div className= "tasksCont">
           <Tasks
              tasks= {this.state.tasks}
              delete= {this.deleteTaskHandler}
@@ -79,7 +79,7 @@ class App extends Component {
       );
     
     return (
-      <div className="App">
+      <div>
         <Header clicked= {this.addNewTaskHandler}/>
            {tasks}
       </div>

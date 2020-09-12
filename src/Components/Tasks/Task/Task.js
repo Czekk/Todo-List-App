@@ -5,8 +5,8 @@ const task = (probs) => {
 return (
     <div className = 'grid-container'>
         <div className='main'> 
-            <input type='text' onChange= {probs.edit} value= {probs.title} placeholder='Title' name='title'/> <br/>
-            <textarea type='text' onChange= {probs.edit} value= {probs.desc} placeholder='Description' name='desc'/> 
+            <input id ="toStrike" type='text' onChange= {probs.edit} value= {probs.title} placeholder='Title' name='title'/> <br/>
+            <textarea id="toStrike" type='text' onChange= {probs.edit} value= {probs.desc} placeholder='Description' name='desc'/> 
         </div>
         <div className= 'side'>
             <label>Date: </label>
@@ -16,7 +16,7 @@ return (
         </div>
         <div className='util'>
             <label className='checker'>complete</label>
-            <input className='checker' type = "checkBox" title="mark as completed"/><br/>
+            <input className='checker' type = "checkBox" title="mark as completed" onClick= {probs.completeTaskHandler} /><br/>
             <button id='delButton' onClick = {probs.delete} title= 'Delete task'>X</button> 
         </div> 
     </div>
