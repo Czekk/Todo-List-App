@@ -7,7 +7,8 @@ const tasks = (probs) => probs.tasks.map((task, index) => {
             edit={(event)=>probs.change(event, index)}
             desc= {task.desc}                     
             date= {task.date}            
-            time= {task.time}            
+            time= {task.time}
+            status={task.status}           
             key = {task.id}
             delete= {() => probs.delete(index)}
             completeTaskHandler={completeTaskHandler} />
@@ -15,7 +16,8 @@ const tasks = (probs) => probs.tasks.map((task, index) => {
           });
        
           const completeTaskHandler=() => {
-            document.getElementById("toStrike").style.textDecoration= "line-through";
+            document.getElementById("title").style.textDecoration= "line-through";
+            document.getElementById("desc").style.textDecoration= "line-through";
         }
         
 export default tasks;

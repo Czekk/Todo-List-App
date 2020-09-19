@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import Tasks from './Components/Tasks/Tasks';
 import Header from './Components/Header/Header';
+import MaterialIcon, {colorPalette} from 'material-icons-react';
 
 class App extends Component {
 
@@ -32,6 +33,7 @@ class App extends Component {
       desc: null,
       date: null,
       time: null,
+      status:null,
       priority: null,
       id: this.createUniqueId(this.createRandomNum())
     };
@@ -46,7 +48,7 @@ class App extends Component {
   createUniqueId=(num)=>{
     let uniqueId= null;
     this.state.tasks.map(task=>{
-      (num==task.id)? this.createUniqueId(this.createRandomNum()): uniqueId=num;
+      (num===task.id)? this.createUniqueId(this.createRandomNum()): uniqueId=num;
     });
     return uniqueId;
   }
@@ -82,6 +84,7 @@ class App extends Component {
       <div>
         <Header clicked= {this.addNewTaskHandler}/>
            {tasks}
+           <MaterialIcon icon="alarm_on" />
       </div>
     );
   }

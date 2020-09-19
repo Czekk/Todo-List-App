@@ -1,12 +1,14 @@
 import React from 'react';
 import './Header.css';
+import MaterialIcon, {colorPalette} from 'material-icons-react';
 
 const header = (probs)=> {
    return (
     <div className='headerCon'>
         <h1>Todo List</h1>
         <h4>'Plan Ahead!'</h4>
-        <button id='addTaskButton' onClick= {probs.clicked}>+</button>
+        <MaterialIcon icon="add_circle" id='addTaskButton' onClick= {probs.clicked} size="large"/>
+        
     </div>
    );
 }
